@@ -1,0 +1,65 @@
+<?xml version="1.0" ?>
+<cherrytree>
+	<node custom_icon_id="0" foreground="#ff0000" is_bold="False" name="_Info" prog_lang="custom-colors" readonly="False" tags="" ts_creation="1556177514.31" ts_lastsave="1561111176.77" unique_id="1">
+		<rich_text>ALT+SHIFT+F für Einrückung bei Netbeans
+
+	</rich_text>
+		<rich_text scale="h1" underline="single">Netbeans</rich_text>
+		<rich_text>
+Repo Konfiguration: Adresse mit https Protokoll
+
+Assertion einschalten: </rich_text>
+		<rich_text link="webs https://wiki.openoffice.org/wiki/NetBeans_Tips_and_Tricks#Assertions">https://wiki.openoffice.org/wiki/NetBeans_Tips_and_Tricks#Assertions</rich_text>
+		<rich_text> und nur -ea
+
+Tabs: </rich_text>
+		<rich_text link="webs https://stackoverflow.com/questions/1949014/how-can-i-configure-netbeans-to-insert-tabs-instead-of-a-bunch-of-spaces">https://stackoverflow.com/questions/1949014/how-can-i-configure-netbeans-to-insert-tabs-instead-of-a-bunch-of-spaces</rich_text>
+		<rich_text>
+
+</rich_text>
+	</node>
+	<node custom_icon_id="0" foreground="" is_bold="False" name="Ideen" prog_lang="custom-colors" readonly="False" tags="" ts_creation="1558082189.93" ts_lastsave="1559916747.28" unique_id="6">
+		<rich_text></rich_text>
+	</node>
+	<node custom_icon_id="0" foreground="" is_bold="False" name="Vergangen" prog_lang="custom-colors" readonly="False" tags="" ts_creation="1556179371.03" ts_lastsave="1561111187.13" unique_id="2">
+		<rich_text></rich_text>
+	</node>
+	<node custom_icon_id="0" foreground="#ff0000" is_bold="True" name="Aktuell" prog_lang="custom-colors" readonly="False" tags="" ts_creation="1556179378.83" ts_lastsave="1561111258.5" unique_id="3">
+		<rich_text>Helfen lassen, wenn etwas nicht funktioniert
+Fragen bei: Problem über 20 Minuten
+____________________________
+
+</rich_text>
+		<rich_text scale="h1" underline="single">Anfang</rich_text>
+		<rich_text>
+Kamera: PoE -&gt; PoE Switch; Ansprechen? Linux Kamera Device -&gt;wahrscheinlich OpenCV Device
+
+Kamera: OpenCV Java API
+
+Erster Schritt: Kamera von Laptop auslesen
+
+Zubehör: Switch mit Stromversorgung, 2* Ethernet Patchkabel, Industriekamera
+
+Web:
+opencv java
+</rich_text>
+		<rich_text link="webs https://opencv-java-tutorials.readthedocs.io/en/latest/">https://opencv-java-tutorials.readthedocs.io/en/latest/</rich_text>
+		<rich_text>
+</rich_text>
+		<rich_text link="webs https://opencv-java-tutorials.readthedocs.io/en/latest/01-installing-opencv-for-java.html">https://opencv-java-tutorials.readthedocs.io/en/latest/01-installing-opencv-for-java.html</rich_text>
+		<rich_text>
+opencv netbeans
+</rich_text>
+		<rich_text link="webs https://www.codeproject.com/Tips/717283/How-to-Use-OpenCV-with-Java-under-NetBeans-IDE">https://www.codeproject.com/Tips/717283/How-to-Use-OpenCV-with-Java-under-NetBeans-IDE</rich_text>
+		<rich_text>
+</rich_text>
+		<rich_text link="webs http://eyalarubas.com/opencv-installation-on-windows-netbeans-mingw.html">http://eyalarubas.com/opencv-installation-on-windows-netbeans-mingw.html</rich_text>
+		<rich_text>
+
+</rich_text>
+	</node>
+	<node custom_icon_id="0" foreground="" is_bold="False" name="Künftig" prog_lang="custom-colors" readonly="False" tags="" ts_creation="1556179385.33" ts_lastsave="1561111189.9" unique_id="4">
+		<rich_text>
+</rich_text>
+	</node>
+</cherrytree>
