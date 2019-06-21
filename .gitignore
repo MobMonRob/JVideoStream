@@ -1,4 +1,4 @@
-.ctd~*
+*.ctd~*
 /JVideoStream/nbproject/private/
 /JVideoStream/build/
 /JVideoStream/dist/
