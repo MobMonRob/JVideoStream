@@ -24,23 +24,48 @@ Tabs: </rich_text>
 	<node custom_icon_id="0" foreground="" is_bold="False" name="Vergangen" prog_lang="custom-colors" readonly="False" tags="" ts_creation="1556179371.03" ts_lastsave="1561111187.13" unique_id="2">
 		<rich_text></rich_text>
 	</node>
-	<node custom_icon_id="0" foreground="#ff0000" is_bold="True" name="Aktuell" prog_lang="custom-colors" readonly="False" tags="" ts_creation="1556179378.83" ts_lastsave="1561111382.82" unique_id="3">
+	<node custom_icon_id="0" foreground="#ff0000" is_bold="True" name="Aktuell" prog_lang="custom-colors" readonly="False" tags="" ts_creation="1556179378.83" ts_lastsave="1561719620.8" unique_id="3">
 		<rich_text>Helfen lassen, wenn etwas nicht funktioniert
 Fragen bei: Problem über 20 Minuten
 ____________________________
+</rich_text>
+		<rich_text scale="h1" underline="single">ToDo</rich_text>
+		<rich_text scale="h1">'</rich_text>
+		<rich_text>
+Kamera zum Laufen bekommen (Software: pylon Viewer; Hardware: PoE Switch)
+Dokumentation lesen
+Tool für GlueCode suchen
+SWIG ausprobieren
+////////////////////
+
 
 </rich_text>
-		<rich_text scale="h1" underline="single">Anfang</rich_text>
+		<rich_text scale="h1" underline="single">Info</rich_text>
 		<rich_text>
-Kamera: PoE -&gt; PoE Switch; Ansprechen? Linux Kamera Device -&gt;wahrscheinlich OpenCV Device
+Proprietärer Standard &quot;GigE Vision&quot; zur Konfiguration und Datenübertragung.
+Basler API (C#, C, </rich_text>
+		<rich_text weight="heavy">C++</rich_text>
+		<rich_text>) benutzen mit Java Native Interface -&gt; Tool, das automatisch Glue Code generiert?: SWIG -&gt;wird sehr aufwendig!
+	-&gt; Nicht unbedingt aufwändig. Skript schreiben, dass alle .h Dateien in das SWIG füttert? -&gt;SWIG muss aber auch Shared Libraries rein nehmen. -&gt;immernoch aufwändig.
+	</rich_text>
+		<rich_text link="webs https://stackoverflow.com/questions/10126531/swig-and-c-shared-library">https://stackoverflow.com/questions/10126531/swig-and-c-shared-library</rich_text>
+		<rich_text>
+Besser: C#/C++ benutzen, um Bibliothek zu bauen, die notwendige Funktionalität liefert. Dann GlueCode zu dieser Bibliothek. Aber: Netbeans unterstütz nicht mehr?
+Alternativ: C++ Code auf JVM compilieren (nur Header?!); dann LowLevel Zugriff (wie??!)
+	Graal Sulong </rich_text>
+		<rich_text link="webs https://github.com/oracle/graal/tree/master/sulong">https://github.com/oracle/graal/tree/master/sulong</rich_text>
+		<rich_text>
+Alternativ: andere Spache benutzen.
+Java OpenCV benutzen für weitere Verarbeitung
 
-Kamera: OpenCV Java API
 
-Erster Schritt: Kamera von Laptop auslesen
 
 Zubehör: Switch mit Stromversorgung, 2* Ethernet Patchkabel, Industriekamera
 
-Web:
+
+</rich_text>
+		<rich_text scale="h3" underline="single">OpenCV</rich_text>
+		<rich_text>
 opencv java
 </rich_text>
 		<rich_text link="webs https://opencv-java-tutorials.readthedocs.io/en/latest/">https://opencv-java-tutorials.readthedocs.io/en/latest/</rich_text>
@@ -54,6 +79,37 @@ opencv netbeans
 		<rich_text>
 </rich_text>
 		<rich_text link="webs http://eyalarubas.com/opencv-installation-on-windows-netbeans-mingw.html">http://eyalarubas.com/opencv-installation-on-windows-netbeans-mingw.html</rich_text>
+		<rich_text>
+
+
+</rich_text>
+		<rich_text scale="h3" underline="single">Kamera</rich_text>
+		<rich_text>
+</rich_text>
+		<rich_text link="webs https://www.baslerweb.com/de/produkte/kameras/flaechenkameras/ace/aca1300-75gc/">https://www.baslerweb.com/de/produkte/kameras/flaechenkameras/ace/aca1300-75gc/</rich_text>
+		<rich_text>
+
+
+</rich_text>
+		<rich_text scale="h3" underline="single">GlueCode</rich_text>
+		<rich_text>
+</rich_text>
+		<rich_text link="webs https://en.wikipedia.org/wiki/SWIG">https://en.wikipedia.org/wiki/SWIG</rich_text>
+		<rich_text>
+	</rich_text>
+		<rich_text link="webs http://www.swig.org/Doc1.3/Java.html#Java">http://www.swig.org/Doc1.3/Java.html#Java</rich_text>
+		<rich_text>
+	</rich_text>
+		<rich_text link="webs http://www.swig.org/Doc1.3/SWIG.html#SWIG">http://www.swig.org/Doc1.3/SWIG.html#SWIG</rich_text>
+		<rich_text>
+
+</rich_text>
+		<rich_text link="webs https://en.wikipedia.org/wiki/Java_Native_Access">https://en.wikipedia.org/wiki/Java_Native_Access</rich_text>
+		<rich_text>
+
+
+</rich_text>
+		<rich_text foreground="#ffff00000000">Oliver zeigen, wie in pylon Viewer das “Problem” mit den Properties gelöst wurde. Gefällt mir eigentlich. -&gt; Feature, Value</rich_text>
 		<rich_text>
 
 </rich_text>
