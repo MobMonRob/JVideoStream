@@ -21,10 +21,14 @@ Tabs: </rich_text>
 	<node custom_icon_id="0" foreground="" is_bold="False" name="Ideen" prog_lang="custom-colors" readonly="False" tags="" ts_creation="1558082189.93" ts_lastsave="1559916747.28" unique_id="6">
 		<rich_text></rich_text>
 	</node>
-	<node custom_icon_id="0" foreground="" is_bold="False" name="Vergangen" prog_lang="custom-colors" readonly="False" tags="" ts_creation="1556179371.03" ts_lastsave="1561111187.13" unique_id="2">
-		<rich_text></rich_text>
+	<node custom_icon_id="0" foreground="" is_bold="False" name="Vergangen" prog_lang="custom-colors" readonly="False" tags="" ts_creation="1556179371.03" ts_lastsave="1562227909.69" unique_id="2">
+		<rich_text>Kamera zum Laufen bekommen (Software: pylon Viewer; Hardware: PoE Switch)
+Dokumentation lesen
+Möglichkeiten für GlueCode suchen
+
+</rich_text>
 	</node>
-	<node custom_icon_id="0" foreground="#ff0000" is_bold="True" name="Aktuell" prog_lang="custom-colors" readonly="False" tags="" ts_creation="1556179378.83" ts_lastsave="1561719620.8" unique_id="3">
+	<node custom_icon_id="0" foreground="#ff0000" is_bold="True" name="Aktuell" prog_lang="custom-colors" readonly="False" tags="" ts_creation="1556179378.83" ts_lastsave="1562231624.38" unique_id="3">
 		<rich_text>Helfen lassen, wenn etwas nicht funktioniert
 Fragen bei: Problem über 20 Minuten
 ____________________________
@@ -32,35 +36,24 @@ ____________________________
 		<rich_text scale="h1" underline="single">ToDo</rich_text>
 		<rich_text scale="h1">'</rich_text>
 		<rich_text>
-Kamera zum Laufen bekommen (Software: pylon Viewer; Hardware: PoE Switch)
-Dokumentation lesen
-Tool für GlueCode suchen
-SWIG ausprobieren
-////////////////////
+Visual Studio Community installieren
+(10:15) Projekt anlegen mit Anleitung in VS -&gt; </rich_text>
+		<rich_text link="webs https://www.baslerweb.com/fp-1546521676/media/downloads/documents/application_notes/AW00136802000_Getting_Started_with_pylon5_and_OpenCV.pdf">https://www.baslerweb.com/fp-1546521676/media/downloads/documents/application_notes/AW00136802000_Getting_Started_with_pylon5_and_OpenCV.pdf</rich_text>
+		<rich_text>
+	OpenCV installieren
 
 
 </rich_text>
 		<rich_text scale="h1" underline="single">Info</rich_text>
 		<rich_text>
+Zubehör: Switch mit Stromversorgung, 2* Ethernet Patchkabel, Industriekamera: Basler acA 1300-75gc
+
 Proprietärer Standard &quot;GigE Vision&quot; zur Konfiguration und Datenübertragung.
-Basler API (C#, C, </rich_text>
-		<rich_text weight="heavy">C++</rich_text>
-		<rich_text>) benutzen mit Java Native Interface -&gt; Tool, das automatisch Glue Code generiert?: SWIG -&gt;wird sehr aufwendig!
-	-&gt; Nicht unbedingt aufwändig. Skript schreiben, dass alle .h Dateien in das SWIG füttert? -&gt;SWIG muss aber auch Shared Libraries rein nehmen. -&gt;immernoch aufwändig.
-	</rich_text>
-		<rich_text link="webs https://stackoverflow.com/questions/10126531/swig-and-c-shared-library">https://stackoverflow.com/questions/10126531/swig-and-c-shared-library</rich_text>
-		<rich_text>
-Besser: C#/C++ benutzen, um Bibliothek zu bauen, die notwendige Funktionalität liefert. Dann GlueCode zu dieser Bibliothek. Aber: Netbeans unterstütz nicht mehr?
-Alternativ: C++ Code auf JVM compilieren (nur Header?!); dann LowLevel Zugriff (wie??!)
-	Graal Sulong </rich_text>
-		<rich_text link="webs https://github.com/oracle/graal/tree/master/sulong">https://github.com/oracle/graal/tree/master/sulong</rich_text>
-		<rich_text>
-Alternativ: andere Spache benutzen.
-Java OpenCV benutzen für weitere Verarbeitung
+Basler bietet Treiber für Linux an.
 
+OpenCV an pylon API kleben mit C++ in VisualStudio.
 
-
-Zubehör: Switch mit Stromversorgung, 2* Ethernet Patchkabel, Industriekamera
+OpenCV Java Wrapper für weiteres Vorgehen benutzen
 
 
 </rich_text>
@@ -91,8 +84,9 @@ opencv netbeans
 
 
 </rich_text>
-		<rich_text scale="h3" underline="single">GlueCode</rich_text>
+		<rich_text scale="h3" underline="single">GlueCode: C++ -&gt; Java</rich_text>
 		<rich_text>
+Wrapper:
 </rich_text>
 		<rich_text link="webs https://en.wikipedia.org/wiki/SWIG">https://en.wikipedia.org/wiki/SWIG</rich_text>
 		<rich_text>
@@ -107,9 +101,10 @@ opencv netbeans
 		<rich_text link="webs https://en.wikipedia.org/wiki/Java_Native_Access">https://en.wikipedia.org/wiki/Java_Native_Access</rich_text>
 		<rich_text>
 
-
-</rich_text>
-		<rich_text foreground="#ffff00000000">Oliver zeigen, wie in pylon Viewer das “Problem” mit den Properties gelöst wurde. Gefällt mir eigentlich. -&gt; Feature, Value</rich_text>
+Alternativ:
+C++ Code auf JVM compilieren (nur Header?!); dann LowLevel Zugriff (wie??!)
+	Graal Sulong </rich_text>
+		<rich_text link="webs https://github.com/oracle/graal/tree/master/sulong">https://github.com/oracle/graal/tree/master/sulong</rich_text>
 		<rich_text>
 
 </rich_text>
