@@ -157,6 +157,10 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="PylonOpenCV.cpp" />
+    <ClCompile Include="openCVGrab.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="openCVGrab.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

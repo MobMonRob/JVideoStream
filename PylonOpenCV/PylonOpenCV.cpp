@@ -2,10 +2,13 @@
 //
 
 #include <iostream>
+#include "openCVGrab.h"
 
 int main()
 {
     std::cout << "Hello World!\n";
+
+	return execute();
 }
 
 // Programm ausführen: STRG+F5 oder "Debuggen" > Menü "Ohne Debuggen starten"
