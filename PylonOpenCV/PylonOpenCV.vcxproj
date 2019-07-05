@@ -156,11 +156,16 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="CameraGrabber.cpp" />
     <ClCompile Include="PylonOpenCV.cpp" />
     <ClCompile Include="openCVGrab.cpp" />
+    <ClCompile Include="PylonOpenCVcontroller.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="CameraGrabber.h" />
     <ClInclude Include="openCVGrab.h" />
+    <ClInclude Include="PylonOpenCVcontroller.h" />
+    <ClInclude Include="TRY_CATCH.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

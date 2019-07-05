@@ -23,7 +23,7 @@ using namespace cv;
 using namespace std;
 
 // Number of images to be grabbed.
-static const uint32_t c_countOfImagesToGrab = 1000;
+static const uint32_t c_countOfImagesToGrab = 100;
 
 int execute()
 {
@@ -41,10 +41,11 @@ int execute()
 		CInstantCamera camera(CTlFactory::GetInstance().CreateFirstDevice());
 
 		// or use a device info object to use a specific camera
-	//CDeviceInfo info;
-	//info.SetSerialNumber("21694497");
-	//CInstantCamera camera( CTlFactory::GetInstance().CreateFirstDevice(info));
-		cout << "Camera Created." << endl;
+		//CDeviceInfo info;
+		//info.SetSerialNumber("21694497");
+		//CInstantCamera camera( CTlFactory::GetInstance().CreateFirstDevice(info));
+
+		cout << "Camera created." << endl;
 		// Print the model name of the camera.
 		cout << "Using device " << camera.GetDeviceInfo().GetModelName() << endl;
 
@@ -63,7 +64,7 @@ int execute()
 		// Start the grabbing of c_countOfImagesToGrab images.
 		// The camera device is parameterized with a default configuration which
 		// sets up free-running continuous acquisition.
-		camera.StartGrabbing(c_countOfImagesToGrab);
+		camera.StartGrabbing(); //c_countOfImagesToGrab
 
 		// This smart pointer will receive the grab result data.
 		CGrabResultPtr ptrGrabResult;
@@ -90,7 +91,7 @@ int execute()
 				openCvImage = cv::Mat(ptrGrabResult->GetHeight(), ptrGrabResult->GetWidth(), CV_8UC3, (uint8_t*)pylonImage.GetBuffer());
 
 				// Create a display window
-				namedWindow("OpenCV Display Window");//AUTOSIZE //FREERATIO
+				//namedWindow("OpenCV Display Window");//AUTOSIZE //FREERATIO
 				// Display the current image with opencv
 				imshow("OpenCV Display Window", openCvImage);
 				// Define a timeout for customer's input in ms.
