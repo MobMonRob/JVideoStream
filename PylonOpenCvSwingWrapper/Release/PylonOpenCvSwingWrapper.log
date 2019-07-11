@@ -1,0 +1,7 @@
+﻿  Performing Custom Build Tools
+  PylonOpenCvSwingWrapper.cxx
+  PylonOpenCvSwingWrapper_wrap.cxx
+  Code wird generiert...
+LINK : warning LNK4075: /INCREMENTAL wird aufgrund der Angabe von /OPT:ICF ignoriert.
+     Bibliothek "C:\Users\MobMonRob\Documents\NetBeansProjects\JVideoStream\PylonOpenCvSwingWrapper\Release\PylonOpenCvSwingWrapper.lib" und Objekt "C:\Users\MobMonRob\Documents\NetBeansProjects\JVideoStream\PylonOpenCvSwingWrapper\Release\PylonOpenCvSwingWrapper.exp" werden erstellt.
+  PylonOpenCvSwingWrapper.vcxproj -> C:\Users\MobMonRob\Documents\NetBeansProjects\JVideoStream\PylonOpenCvSwingWrapper\Release\PylonOpenCvSwingWrapper.java

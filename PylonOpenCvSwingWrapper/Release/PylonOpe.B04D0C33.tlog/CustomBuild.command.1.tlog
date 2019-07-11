@@ -1,0 +1,2 @@
+^C:\USERS\MOBMONROB\DOCUMENTS\NETBEANSPROJECTS\JVIDEOSTREAM\PYLONOPENCVSWINGWRAPPER\PYLONOPENCVSWINGWRAPPER.I
+swig -c++ -java -outdir C:\Users\MobMonRob\Documents\NetBeansProjects\JVideoStream\PylonOpenCvSwingWrapper\Release\ PylonOpenCvSwingWrapper.i

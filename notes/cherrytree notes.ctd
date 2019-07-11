@@ -27,14 +27,27 @@ Strg+W schält Zeilenumbruch um
 	<node custom_icon_id="0" foreground="" is_bold="False" name="Ideen" prog_lang="custom-colors" readonly="False" tags="" ts_creation="1558082189.93" ts_lastsave="1559916747.28" unique_id="6">
 		<rich_text></rich_text>
 	</node>
-	<node custom_icon_id="0" foreground="" is_bold="False" name="Vergangen" prog_lang="custom-colors" readonly="False" tags="" ts_creation="1556179371.03" ts_lastsave="1562227909.69" unique_id="2">
+	<node custom_icon_id="0" foreground="" is_bold="False" name="Vergangen" prog_lang="custom-colors" readonly="False" tags="" ts_creation="1556179371.03" ts_lastsave="1562833229.58" unique_id="2">
 		<rich_text>Kamera zum Laufen bekommen (Software: pylon Viewer; Hardware: PoE Switch)
 Dokumentation lesen
-Möglichkeiten für GlueCode suchen
+Möglichkeiten für GlueCode suchen -&gt; SWIG, SULONG
+
+Visual Studio Community installieren
+OpenCV installieren
+Projekt anlegen mit Anleitung in VS -&gt; </rich_text>
+		<rich_text link="webs https://www.baslerweb.com/fp-1546521676/media/downloads/documents/application_notes/AW00136802000_Getting_Started_with_pylon5_and_OpenCV.pdf">https://www.baslerweb.com/fp-1546521676/media/downloads/documents/application_notes/AW00136802000_Getting_Started_with_pylon5_and_OpenCV.pdf</rich_text>
+		<rich_text>
+C++ Code schreiben, um OpenCV und die pylon API zusammen zu kleben
+	Ziel: OpenCV Bilder holen
+-&gt;Code Beispiel aus dem Internt funktioniert
+
+Klasse erstellen
+	umstellen auf CameraGrabber.cpp
+		davor nochmal beide Versionen vergleichen
 
 </rich_text>
 	</node>
-	<node custom_icon_id="0" foreground="#ff0000" is_bold="True" name="Aktuell" prog_lang="custom-colors" readonly="False" tags="" ts_creation="1556179378.83" ts_lastsave="1562831205.8" unique_id="3">
+	<node custom_icon_id="0" foreground="#ff0000" is_bold="True" name="Aktuell" prog_lang="custom-colors" readonly="False" tags="" ts_creation="1556179378.83" ts_lastsave="1562842484.51" unique_id="3">
 		<rich_text>Helfen lassen, wenn etwas nicht funktioniert
 Fragen bei: Problem über 20 Minuten
 ____________________________
@@ -45,51 +58,103 @@ Irgendwann noch mögliches Projekt(?): </rich_text>
 
 
 </rich_text>
-		<rich_text scale="h1" underline="single">ToDo</rich_text>
-		<rich_text scale="h1">'</rich_text>
+		<rich_text scale="h1" underline="single" weight="heavy">ToDo</rich_text>
+		<rich_text scale="h1" weight="heavy">'</rich_text>
 		<rich_text>
-Visual Studio Community installieren
-OpenCV installieren
-Projekt anlegen mit Anleitung in VS -&gt; </rich_text>
-		<rich_text link="webs https://www.baslerweb.com/fp-1546521676/media/downloads/documents/application_notes/AW00136802000_Getting_Started_with_pylon5_and_OpenCV.pdf">https://www.baslerweb.com/fp-1546521676/media/downloads/documents/application_notes/AW00136802000_Getting_Started_with_pylon5_and_OpenCV.pdf</rich_text>
+Wie klebe ich den Output an meine Java Dateien?
+
+
+Dokumentieren!
+
+
+
+SWIG Testen
+	(11:00) Laufen bekommen erst mit einfacher Beispiel Vorlage “Class” von SWIG
+	Seperates Projekt
+		Custom Build Visual Studio	
+	
+	
+	
+	
+	erst mit meinem C++ Beispiel
+	dann mit der Pylon API -&gt;C API, falls C++ nicht funktioniert
+
+--&gt;C++ Include Dokumentation auch nochmal anschauen und notieren
+
+</rich_text>
+		<rich_text scale="h3" underline="single">swig in den Path einfügen</rich_text>
 		<rich_text>
-C++ Code schreiben, um OpenCV und die pylon API zusammen zu kleben
-	Ziel: OpenCV Bilder holen
--&gt;Code Beispiel aus dem Internt funktioniert
-/////////////
-
-Klasse erstellen
-	umstellen auf CameraGrabber.cpp
-		davor nochmal beide Versionen vergleichen
-
-	Anpassen auf Dauer-Grab: camera-&gt;registerCameraEventhandler()
-	isInitialized in Klasse aulagern? -&gt; Generalisierung über Initialisierer oder einfach Factory?
-	--&gt;schnell lauffähige Klasse(n) bekommen!!
+	Suche: env
+	Umgebungsvariablen anklicken
+	Path bearbeiten, Neu: C:\Program Files\swigwin-4.0.0\
 
 
-Heartbeats aus Dokument?!
+</rich_text>
+		<rich_text scale="h3" underline="single">VS Projekt für SWIG erstellen</rich_text>
+		<rich_text>
+Starte Visual Studio 2019
+Ohne Code fortfahren
+Datei, Neu, Projekt aus vorhandenem Code
+“Visual C++” auswählen
+*.i Dateityp hinzufügen
+Projekttyp DLL
+Fertigstellen
+Rechtsklich auf .i Datei, Eigenschaften
+Konfiguration: Alle Konfigurationen
+Elementtyp “Benutzerdefiniertes Buildtool&quot;
+übernehmen
+Links in den Eingenschaften “Benutzerdefiniertes Buildtool” anklicken
+Befehlszeite “swig -c++ -java -outdir $(Outdir) %(Identity)” (nimmt an, dass SWIG im PATH ist und leitet die generierte .java Datei nach Bedarf in das Debug oder Releasse Verzeichnis um.)
+Ausgaben &quot;%(Filename)_wrap.cxx;$(Outdir)%(Filename).java&quot;
+Okay.
+Rechtsklick auf .i Datei, Kompilieren
+Rechtsklick auf Projekt, Hinzufügen, Neuer Filter, “Generated Files” nennen
+Rechtsklick “Generated Files”, Hinzufügen, Existierendes Element und wähle die _wrap.cxx Datei aus welche durch das Kompilieren erzeugt wurde
+
+Rechtsklick auf Projekt, Eigenschaften
+Konfiguration: Alle Konfigurationen
+Linker, Allgemein, Zusätzliche Bibliotheksverzeichnisse, füge den Pfad zu den Java Bibliotheken hinzu, typischerweise “C:\Program Files\Java\jdk-12\lib”
+Erweitert, Zieldateienerweiterung “.java”
+“Release” Version des Projektes bauen
+
+
+Linker, Allgmeine, Zusätzliche Bibliotheksverzeichnisse: C:\Program Files\Java\jdk-12\lib
+
+C++, Allgemein, Zusätzliche Include Verzeichnisse: C:\Program Files\Java\jdk-12\include ; C:\Program Files\Java\jdk-12\include\win32
+
+
+</rich_text>
+		<rich_text scale="h3" underline="single">Swig Konsole</rich_text>
+		<rich_text>
+Umgebungsveriablen setzen
+JAVA_INCLUDE C:\Program Files\Java\jdk-12\include
+JAVA_BIN C:\Program Files\Java\jdk-12\bin
+
+
+
+
+</rich_text>
+		<rich_text scale="h1" underline="single" weight="heavy">Ideen</rich_text>
+		<rich_text>
+Klasse
+	anpassen auf Dauer-Grab: camera-&gt;registerCameraEventhandler()
+	isInitialized() in Klasse aulagern? -&gt; Generalisierung über Initialisierer oder einfach Factory?
+
+Heartbeats aus Dokument, um Verbindung mit Kamera länger aufrecht zu erhalten?
 </rich_text>
 		<rich_text foreground="#ffff00000000">Doku lesen</rich_text>
 		<rich_text>
 Beispiele anschauen
 
-
-OpenCV Service Provider Interface für Kamera Streams? -&gt;
+OpenCV Service Provider Interface für Kamera Streams?
 	In C++ implementieren
 	openCV Camera Interface??
 
-Vielleicht: Library für Windows und für Linux compilieren?	
-
-SWIG Pylon API????
----&gt;</rich_text>
-		<rich_text foreground="#ffff00000000">Pylon API rein schauen, ob SWIG Probleme möglich</rich_text>
-		<rich_text>
---&gt;Oliver fragen, SWIG ausprobieren wie
--&gt;C-Interface benutzen, falls C++ nicht funktioniert
+Pylon API Zeug in das git legen
 
 
 </rich_text>
-		<rich_text scale="h1" underline="single">Info</rich_text>
+		<rich_text scale="h1" underline="single" weight="heavy">Info</rich_text>
 		<rich_text>
 Zubehör: Switch mit Stromversorgung, 2* Ethernet Patchkabel, Industriekamera: Basler acA 1300-75gc
 
@@ -151,6 +216,9 @@ C++ Code auf JVM compilieren (nur Header?!); dann LowLevel Zugriff (wie??!)
 	Graal Sulong </rich_text>
 		<rich_text link="webs https://github.com/oracle/graal/tree/master/sulong">https://github.com/oracle/graal/tree/master/sulong</rich_text>
 		<rich_text>
+-&gt;Achtung: GraalVM</rich_text>
+		<rich_text foreground="#545454"> </rich_text>
+		<rich_text>noch nicht für Windows verfügbar
 
 </rich_text>
 	</node>
