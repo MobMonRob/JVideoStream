@@ -12,8 +12,11 @@
 class CameraGrabber
 {
 private:
+	static const bool DEBUG = true;
+
+
 	// Number of images to be grabbed.
-	static const size_t c_countOfImagesToGrab = 100;
+	static const size_t c_countOfImagesToGrab = 250;
 
 	// The parameter MaxNumBuffer can be used to control the count of buffers
 	// allocated for grabbing. The default value of this parameter is 10.
@@ -37,5 +40,9 @@ public:
 	std::optional<Pylon::CPylonImage> grabNextImage();
 	static cv::Mat pylonImageToOpenCvImage(Pylon::CPylonImage thePylonImage);
 	static void showWindow(cv::Mat openCvImage);
+
+
+	//Test Interface
+	static int execute();
 };
 

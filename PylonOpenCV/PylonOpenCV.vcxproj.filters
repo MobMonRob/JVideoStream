@@ -18,9 +18,6 @@
     <ClCompile Include="PylonOpenCV.cpp">
       <Filter>Quelldateien</Filter>
     </ClCompile>
-    <ClCompile Include="openCVGrab.cpp">
-      <Filter>Quelldateien</Filter>
-    </ClCompile>
     <ClCompile Include="CameraGrabber.cpp">
       <Filter>Quelldateien</Filter>
     </ClCompile>
@@ -29,9 +26,6 @@
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="openCVGrab.h">
-      <Filter>Headerdateien</Filter>
-    </ClInclude>
     <ClInclude Include="CameraGrabber.h">
       <Filter>Headerdateien</Filter>
     </ClInclude>

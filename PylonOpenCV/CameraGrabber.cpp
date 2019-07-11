@@ -42,7 +42,12 @@ void CameraGrabber::initialize()
 
 	// The camera device is parameterized with a default configuration which
 	// sets up free-running continuous acquisition.
-	camera->StartGrabbing(); //c_countOfImagesToGrab
+	if (DEBUG) {
+		camera->StartGrabbing(c_countOfImagesToGrab);
+	}
+	else {
+		camera->StartGrabbing();
+	}
 
 	END_TRY_CATCH
 }
@@ -76,12 +81,12 @@ std::optional<Pylon::CPylonImage> CameraGrabber::grabNextImage()
 	}
 
 	// Access the image data.
-	cout << "SizeX: " << ptrGrabResult->GetWidth() << endl;
-	cout << "SizeY: " << ptrGrabResult->GetHeight() << endl;
+	//cout << "SizeX: " << ptrGrabResult->GetWidth() << endl;
+	//cout << "SizeY: " << ptrGrabResult->GetHeight() << endl;
 	const uint8_t* pImageBuffer = (uint8_t*)ptrGrabResult->GetBuffer();
-	cout << "Gray value of first pixel: " << (uint32_t)pImageBuffer[0] << endl << endl;
+	//cout << "Gray value of first pixel: " << (uint32_t)pImageBuffer[0] << endl << endl;
 
-	// Convert the grabbed buffer to pylon imag
+	// Convert the grabbed buffer to pylon image
 	formatConverter.Convert(pylonImage, ptrGrabResult);
 
 	return pylonImage;
@@ -105,5 +110,24 @@ void CameraGrabber::showWindow(cv::Mat openCvImage)
 	// '0' means indefinite, i.e. the next image will be displayed after closing the window 
 	// '1' means live stream
 	cv::waitKey(1);
+}
+
+int CameraGrabber::execute()
+{
+	CameraGrabber cameraGrabber;
+
+	cameraGrabber.initialize();
+
+	while (cameraGrabber.isCameraGrabbing()) {
+		std::optional<Pylon::CPylonImage> optImage = cameraGrabber.grabNextImage();
+
+		if (!optImage.has_value()) continue;
+
+		cv::Mat openCvImage = cameraGrabber.pylonImageToOpenCvImage(optImage.value());
+
+		cameraGrabber.showWindow(openCvImage);
+	}
+
+	return 0;
 }
 

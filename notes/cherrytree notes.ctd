@@ -34,10 +34,16 @@ Möglichkeiten für GlueCode suchen
 
 </rich_text>
 	</node>
-	<node custom_icon_id="0" foreground="#ff0000" is_bold="True" name="Aktuell" prog_lang="custom-colors" readonly="False" tags="" ts_creation="1556179378.83" ts_lastsave="1562325104.1" unique_id="3">
+	<node custom_icon_id="0" foreground="#ff0000" is_bold="True" name="Aktuell" prog_lang="custom-colors" readonly="False" tags="" ts_creation="1556179378.83" ts_lastsave="1562831205.8" unique_id="3">
 		<rich_text>Helfen lassen, wenn etwas nicht funktioniert
 Fragen bei: Problem über 20 Minuten
 ____________________________
+
+Irgendwann noch mögliches Projekt(?): </rich_text>
+		<rich_text link="webs https://www.spice-space.org/">https://www.spice-space.org/</rich_text>
+		<rich_text> in KVM zum Laufen bekommen
+
+
 </rich_text>
 		<rich_text scale="h1" underline="single">ToDo</rich_text>
 		<rich_text scale="h1">'</rich_text>
@@ -53,6 +59,9 @@ C++ Code schreiben, um OpenCV und die pylon API zusammen zu kleben
 /////////////
 
 Klasse erstellen
+	umstellen auf CameraGrabber.cpp
+		davor nochmal beide Versionen vergleichen
+
 	Anpassen auf Dauer-Grab: camera-&gt;registerCameraEventhandler()
 	isInitialized in Klasse aulagern? -&gt; Generalisierung über Initialisierer oder einfach Factory?
 	--&gt;schnell lauffähige Klasse(n) bekommen!!
@@ -76,6 +85,7 @@ SWIG Pylon API????
 		<rich_text foreground="#ffff00000000">Pylon API rein schauen, ob SWIG Probleme möglich</rich_text>
 		<rich_text>
 --&gt;Oliver fragen, SWIG ausprobieren wie
+-&gt;C-Interface benutzen, falls C++ nicht funktioniert
 
 
 </rich_text>

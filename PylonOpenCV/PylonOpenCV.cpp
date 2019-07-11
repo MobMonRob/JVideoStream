@@ -2,13 +2,13 @@
 //
 
 #include <iostream>
-#include "openCVGrab.h"
+#include "CameraGrabber.h"
 
 int main()
 {
     std::cout << "Hello World!\n";
 
-	return execute();
+	return CameraGrabber::execute();
 }
 
 // Programm ausführen: STRG+F5 oder "Debuggen" > Menü "Ohne Debuggen starten"
@@ -21,3 +21,4 @@ int main()
 //   4. Verwenden Sie das Fenster "Fehlerliste", um Fehler anzuzeigen.
 //   5. Wechseln Sie zu "Projekt" > "Neues Element hinzufügen", um neue Codedateien zu erstellen, bzw. zu "Projekt" > "Vorhandenes Element hinzufügen", um dem Projekt vorhandene Codedateien hinzuzufügen.
 //   6. Um dieses Projekt später erneut zu öffnen, wechseln Sie zu "Datei" > "Öffnen" > "Projekt", und wählen Sie die SLN-Datei aus.
+
