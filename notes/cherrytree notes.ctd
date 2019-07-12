@@ -47,7 +47,7 @@ Klasse erstellen
 
 </rich_text>
 	</node>
-	<node custom_icon_id="0" foreground="#ff0000" is_bold="True" name="Aktuell" prog_lang="custom-colors" readonly="False" tags="" ts_creation="1556179378.83" ts_lastsave="1562842484.51" unique_id="3">
+	<node custom_icon_id="0" foreground="#ff0000" is_bold="True" name="Aktuell" prog_lang="custom-colors" readonly="False" tags="" ts_creation="1556179378.83" ts_lastsave="1562918184.46" unique_id="3">
 		<rich_text>Helfen lassen, wenn etwas nicht funktioniert
 Fragen bei: Problem über 20 Minuten
 ____________________________
@@ -67,14 +67,17 @@ Wie klebe ich den Output an meine Java Dateien?
 Dokumentieren!
 
 
+git .gitignore Fehler im Wrapper Verzeichnis beheben
+
+
 
 SWIG Testen
-	(11:00) Laufen bekommen erst mit einfacher Beispiel Vorlage “Class” von SWIG
+	(1:00) Laufen bekommen erst mit einfacher Beispiel Vorlage “Class” von SWIG
 	Seperates Projekt
 		Custom Build Visual Studio	
 	
 	
-	
+
 	
 	erst mit meinem C++ Beispiel
 	dann mit der Pylon API -&gt;C API, falls C++ nicht funktioniert
