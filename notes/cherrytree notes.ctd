@@ -55,7 +55,7 @@ Klasse erstellen
 
 </rich_text>
 	</node>
-	<node custom_icon_id="0" foreground="#ff0000" is_bold="True" name="Aktuell" prog_lang="custom-colors" readonly="False" tags="" ts_creation="1556179378.83" ts_lastsave="1562918662.14" unique_id="3">
+	<node custom_icon_id="0" foreground="#ff0000" is_bold="True" name="Aktuell" prog_lang="custom-colors" readonly="False" tags="" ts_creation="1556179378.83" ts_lastsave="1562927808.61" unique_id="3">
 		<rich_text>Helfen lassen, wenn etwas nicht funktioniert
 Fragen bei: Problem über 20 Minuten
 ____________________________
@@ -69,12 +69,50 @@ Irgendwann noch mögliches Projekt(?): </rich_text>
 		<rich_text scale="h1" underline="single" weight="heavy">ToDo</rich_text>
 		<rich_text scale="h1" weight="heavy">'</rich_text>
 		<rich_text>
-Wie klebe ich den Output an meine Java Dateien?
+
+
+
+
+
+[gemacht] Optimierungen deaktiveren, Laufzeitbibliothek geändert
+Debuglevel erhöhen?
+
+
+
+
 
 
 Dokumentieren!
 
 
+C++ Wrappe Visual Studio Output Dateien in Java Projekt automatisch ablegen
+
+Speichern, dann mal mit meinem C++ Projekt ausprobieren
+
+
+
+
+Netbeans beim Import immer in das Standard Package Verzeichnis und dann in der IDE verschieben, dass automatisch die Dateien oben die richtige package Angabe haben.
+Dateien markieren, Rechtsklick, Refactor, Move
+
+SWIG Dateien richtiger Ort:
+	The generated Java classes can be placed into a Java package by using the -package commandline option. This is often combined with the -outdir to specify a package directory for generating the Java files.
+	swig -java -package com.bloggs.swig -outdir com/bloggs/swig example.i
+	SWIG won't create the directory, so make sure it exists beforehand.
+
+OpenCV zusammenkleben:
+</rich_text>
+		<rich_text link="webs https://anyline.com/news/how-to-glue-java-and-c-together-using-swig-and-type-maps-part-i/">https://anyline.com/news/how-to-glue-java-and-c-together-using-swig-and-type-maps-part-i/</rich_text>
+		<rich_text>	
+
+
+</rich_text>
+		<rich_text scale="h3" underline="single">nicht-jar Library in Netbeans einfügen</rich_text>
+		<rich_text>
+Rechtsklick auf Projekt, Properties
+Run
+VM options hinzufügen:  -Djava.library.path=&quot;path1&quot;;&quot;path2&quot;
+Okay
 
 
 
@@ -111,7 +149,7 @@ Datei, Neu, Projekt aus vorhandenem Code
 Projekttyp DLL
 Fertigstellen
 Rechtsklich auf .i Datei, Eigenschaften
-Konfiguration: Alle Konfigurationen
+Konfiguration: Alle Konfigurationen; Plattform: Alle Plattformen
 Elementtyp “Benutzerdefiniertes Buildtool&quot;
 übernehmen
 Links in den Eingenschaften “Benutzerdefiniertes Buildtool” anklicken
@@ -123,15 +161,12 @@ Rechtsklick auf Projekt, Hinzufügen, Neuer Filter, “Generated Files” nennen
 Rechtsklick “Generated Files”, Hinzufügen, Existierendes Element und wähle die _wrap.cxx Datei aus welche durch das Kompilieren erzeugt wurde
 
 Rechtsklick auf Projekt, Eigenschaften
-Konfiguration: Alle Konfigurationen
-Linker, Allgemein, Zusätzliche Bibliotheksverzeichnisse, füge den Pfad zu den Java Bibliotheken hinzu, typischerweise “C:\Program Files\Java\jdk-12\lib”
-Erweitert, Zieldateienerweiterung “.java”
-“Release” Version des Projektes bauen
+Konfiguration: Alle Konfigurationen; Plattform: Alle Plattformen
+Linker, Allgemein, Zusätzliche Bibliotheksverzeichnisse: “C:\Program Files\Java\jdk-12\lib”
+C++, Allgemein, Zusätzliche Include Verzeichnisse: “C:\Program Files\Java\jdk-12\include&quot; ; &quot;C:\Program Files\Java\jdk-12\include\win32”
 
+Version “Release” “x64” des Projekts bauen
 
-Linker, Allgmeine, Zusätzliche Bibliotheksverzeichnisse: C:\Program Files\Java\jdk-12\lib
-
-C++, Allgemein, Zusätzliche Include Verzeichnisse: C:\Program Files\Java\jdk-12\include ; C:\Program Files\Java\jdk-12\include\win32
 
 
 </rich_text>

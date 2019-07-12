@@ -237,6 +237,48 @@ static void SWIGUNUSED SWIG_JavaThrowException(JNIEnv *jenv, SWIG_JavaExceptionC
 extern "C" {
 #endif
 
+SWIGEXPORT jlong JNICALL Java_PylonOpenCvSwingWrapperJNI_new_1Shape(JNIEnv *jenv, jclass jcls, jint jarg1) {
+  jlong jresult = 0 ;
+  int arg1 ;
+  Shape *result = 0 ;
+  
+  (void)jenv;
+  (void)jcls;
+  arg1 = (int)jarg1; 
+  result = (Shape *)new Shape(arg1);
+  *(Shape **)&jresult = result; 
+  return jresult;
+}
+
+
+SWIGEXPORT jint JNICALL Java_PylonOpenCvSwingWrapperJNI_Shape_1getX(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
+  jint jresult = 0 ;
+  Shape *arg1 = (Shape *) 0 ;
+  int result;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  arg1 = *(Shape **)&jarg1; 
+  result = (int)(arg1)->getX();
+  jresult = (jint)result; 
+  return jresult;
+}
+
+
+SWIGEXPORT void JNICALL Java_PylonOpenCvSwingWrapperJNI_Shape_1setX(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jint jarg2) {
+  Shape *arg1 = (Shape *) 0 ;
+  int arg2 ;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  arg1 = *(Shape **)&jarg1; 
+  arg2 = (int)jarg2; 
+  (arg1)->setX(arg2);
+}
+
+
 SWIGEXPORT void JNICALL Java_PylonOpenCvSwingWrapperJNI_delete_1Shape(JNIEnv *jenv, jclass jcls, jlong jarg1) {
   Shape *arg1 = (Shape *) 0 ;
   
@@ -246,253 +288,6 @@ SWIGEXPORT void JNICALL Java_PylonOpenCvSwingWrapperJNI_delete_1Shape(JNIEnv *je
   delete arg1;
 }
 
-
-SWIGEXPORT void JNICALL Java_PylonOpenCvSwingWrapperJNI_Shape_1x_1set(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jdouble jarg2) {
-  Shape *arg1 = (Shape *) 0 ;
-  double arg2 ;
-  
-  (void)jenv;
-  (void)jcls;
-  (void)jarg1_;
-  arg1 = *(Shape **)&jarg1; 
-  arg2 = (double)jarg2; 
-  if (arg1) (arg1)->x = arg2;
-}
-
-
-SWIGEXPORT jdouble JNICALL Java_PylonOpenCvSwingWrapperJNI_Shape_1x_1get(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
-  jdouble jresult = 0 ;
-  Shape *arg1 = (Shape *) 0 ;
-  double result;
-  
-  (void)jenv;
-  (void)jcls;
-  (void)jarg1_;
-  arg1 = *(Shape **)&jarg1; 
-  result = (double) ((arg1)->x);
-  jresult = (jdouble)result; 
-  return jresult;
-}
-
-
-SWIGEXPORT void JNICALL Java_PylonOpenCvSwingWrapperJNI_Shape_1y_1set(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jdouble jarg2) {
-  Shape *arg1 = (Shape *) 0 ;
-  double arg2 ;
-  
-  (void)jenv;
-  (void)jcls;
-  (void)jarg1_;
-  arg1 = *(Shape **)&jarg1; 
-  arg2 = (double)jarg2; 
-  if (arg1) (arg1)->y = arg2;
-}
-
-
-SWIGEXPORT jdouble JNICALL Java_PylonOpenCvSwingWrapperJNI_Shape_1y_1get(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
-  jdouble jresult = 0 ;
-  Shape *arg1 = (Shape *) 0 ;
-  double result;
-  
-  (void)jenv;
-  (void)jcls;
-  (void)jarg1_;
-  arg1 = *(Shape **)&jarg1; 
-  result = (double) ((arg1)->y);
-  jresult = (jdouble)result; 
-  return jresult;
-}
-
-
-SWIGEXPORT void JNICALL Java_PylonOpenCvSwingWrapperJNI_Shape_1move(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jdouble jarg2, jdouble jarg3) {
-  Shape *arg1 = (Shape *) 0 ;
-  double arg2 ;
-  double arg3 ;
-  
-  (void)jenv;
-  (void)jcls;
-  (void)jarg1_;
-  arg1 = *(Shape **)&jarg1; 
-  arg2 = (double)jarg2; 
-  arg3 = (double)jarg3; 
-  (arg1)->move(arg2,arg3);
-}
-
-
-SWIGEXPORT jdouble JNICALL Java_PylonOpenCvSwingWrapperJNI_Shape_1area(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
-  jdouble jresult = 0 ;
-  Shape *arg1 = (Shape *) 0 ;
-  double result;
-  
-  (void)jenv;
-  (void)jcls;
-  (void)jarg1_;
-  arg1 = *(Shape **)&jarg1; 
-  result = (double)(arg1)->area();
-  jresult = (jdouble)result; 
-  return jresult;
-}
-
-
-SWIGEXPORT jdouble JNICALL Java_PylonOpenCvSwingWrapperJNI_Shape_1perimeter(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
-  jdouble jresult = 0 ;
-  Shape *arg1 = (Shape *) 0 ;
-  double result;
-  
-  (void)jenv;
-  (void)jcls;
-  (void)jarg1_;
-  arg1 = *(Shape **)&jarg1; 
-  result = (double)(arg1)->perimeter();
-  jresult = (jdouble)result; 
-  return jresult;
-}
-
-
-SWIGEXPORT void JNICALL Java_PylonOpenCvSwingWrapperJNI_Shape_1nshapes_1set(JNIEnv *jenv, jclass jcls, jint jarg1) {
-  int arg1 ;
-  
-  (void)jenv;
-  (void)jcls;
-  arg1 = (int)jarg1; 
-  Shape::nshapes = arg1;
-}
-
-
-SWIGEXPORT jint JNICALL Java_PylonOpenCvSwingWrapperJNI_Shape_1nshapes_1get(JNIEnv *jenv, jclass jcls) {
-  jint jresult = 0 ;
-  int result;
-  
-  (void)jenv;
-  (void)jcls;
-  result = (int)Shape::nshapes;
-  jresult = (jint)result; 
-  return jresult;
-}
-
-
-SWIGEXPORT jlong JNICALL Java_PylonOpenCvSwingWrapperJNI_new_1Circle(JNIEnv *jenv, jclass jcls, jdouble jarg1) {
-  jlong jresult = 0 ;
-  double arg1 ;
-  Circle *result = 0 ;
-  
-  (void)jenv;
-  (void)jcls;
-  arg1 = (double)jarg1; 
-  result = (Circle *)new Circle(arg1);
-  *(Circle **)&jresult = result; 
-  return jresult;
-}
-
-
-SWIGEXPORT jdouble JNICALL Java_PylonOpenCvSwingWrapperJNI_Circle_1area(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
-  jdouble jresult = 0 ;
-  Circle *arg1 = (Circle *) 0 ;
-  double result;
-  
-  (void)jenv;
-  (void)jcls;
-  (void)jarg1_;
-  arg1 = *(Circle **)&jarg1; 
-  result = (double)(arg1)->area();
-  jresult = (jdouble)result; 
-  return jresult;
-}
-
-
-SWIGEXPORT jdouble JNICALL Java_PylonOpenCvSwingWrapperJNI_Circle_1perimeter(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
-  jdouble jresult = 0 ;
-  Circle *arg1 = (Circle *) 0 ;
-  double result;
-  
-  (void)jenv;
-  (void)jcls;
-  (void)jarg1_;
-  arg1 = *(Circle **)&jarg1; 
-  result = (double)(arg1)->perimeter();
-  jresult = (jdouble)result; 
-  return jresult;
-}
-
-
-SWIGEXPORT void JNICALL Java_PylonOpenCvSwingWrapperJNI_delete_1Circle(JNIEnv *jenv, jclass jcls, jlong jarg1) {
-  Circle *arg1 = (Circle *) 0 ;
-  
-  (void)jenv;
-  (void)jcls;
-  arg1 = *(Circle **)&jarg1; 
-  delete arg1;
-}
-
-
-SWIGEXPORT jlong JNICALL Java_PylonOpenCvSwingWrapperJNI_new_1Square(JNIEnv *jenv, jclass jcls, jdouble jarg1) {
-  jlong jresult = 0 ;
-  double arg1 ;
-  Square *result = 0 ;
-  
-  (void)jenv;
-  (void)jcls;
-  arg1 = (double)jarg1; 
-  result = (Square *)new Square(arg1);
-  *(Square **)&jresult = result; 
-  return jresult;
-}
-
-
-SWIGEXPORT jdouble JNICALL Java_PylonOpenCvSwingWrapperJNI_Square_1area(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
-  jdouble jresult = 0 ;
-  Square *arg1 = (Square *) 0 ;
-  double result;
-  
-  (void)jenv;
-  (void)jcls;
-  (void)jarg1_;
-  arg1 = *(Square **)&jarg1; 
-  result = (double)(arg1)->area();
-  jresult = (jdouble)result; 
-  return jresult;
-}
-
-
-SWIGEXPORT jdouble JNICALL Java_PylonOpenCvSwingWrapperJNI_Square_1perimeter(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
-  jdouble jresult = 0 ;
-  Square *arg1 = (Square *) 0 ;
-  double result;
-  
-  (void)jenv;
-  (void)jcls;
-  (void)jarg1_;
-  arg1 = *(Square **)&jarg1; 
-  result = (double)(arg1)->perimeter();
-  jresult = (jdouble)result; 
-  return jresult;
-}
-
-
-SWIGEXPORT void JNICALL Java_PylonOpenCvSwingWrapperJNI_delete_1Square(JNIEnv *jenv, jclass jcls, jlong jarg1) {
-  Square *arg1 = (Square *) 0 ;
-  
-  (void)jenv;
-  (void)jcls;
-  arg1 = *(Square **)&jarg1; 
-  delete arg1;
-}
-
-
-SWIGEXPORT jlong JNICALL Java_PylonOpenCvSwingWrapperJNI_Circle_1SWIGUpcast(JNIEnv *jenv, jclass jcls, jlong jarg1) {
-    jlong baseptr = 0;
-    (void)jenv;
-    (void)jcls;
-    *(Shape **)&baseptr = *(Circle **)&jarg1;
-    return baseptr;
-}
-
-SWIGEXPORT jlong JNICALL Java_PylonOpenCvSwingWrapperJNI_Square_1SWIGUpcast(JNIEnv *jenv, jclass jcls, jlong jarg1) {
-    jlong baseptr = 0;
-    (void)jenv;
-    (void)jcls;
-    *(Shape **)&baseptr = *(Square **)&jarg1;
-    return baseptr;
-}
 
 #ifdef __cplusplus
 }
