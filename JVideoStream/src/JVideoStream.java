@@ -3,9 +3,8 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package jvideostream;
 
-import PylonOpenCvSwingWrapper.Shape;
+
 import org.opencv.core.Core;
 import org.opencv.core.CvType;
 import org.opencv.core.Mat;
@@ -17,8 +16,8 @@ import org.opencv.core.Mat;
 public class JVideoStream {
 
     static {
-	System.loadLibrary(Core.NATIVE_LIBRARY_NAME);
-	System.loadLibrary("PylonOpenCvSwingWrapper");
+	//System.loadLibrary(Core.NATIVE_LIBRARY_NAME);
+	//System.loadLibrary("PylonOpenCvSwingWrapper");
     }
 
     /**
@@ -26,15 +25,15 @@ public class JVideoStream {
      */
     public static void main(String[] args) throws InterruptedException {
 	// TODO code application logic here
-	System.out.println("hello");
+	//System.out.println("hello");
 
-	System.loadLibrary(Core.NATIVE_LIBRARY_NAME);
-	Mat mat = Mat.eye(3, 3, CvType.CV_8UC1);
-	System.out.println("mat = " + mat.dump());
+	//Mat mat = Mat.eye(3, 3, CvType.CV_8UC1);
+	//System.out.println("mat = " + mat.dump());
 
 	System.out.println(System.getProperty("java.library.path"));
 	Thread.sleep(100);
 
+	System.loadLibrary("PylonOpenCvSwingWrapper");
 	Shape asdf = new Shape(5);
     }
 }

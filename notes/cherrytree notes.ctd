@@ -55,7 +55,7 @@ Klasse erstellen
 
 </rich_text>
 	</node>
-	<node custom_icon_id="0" foreground="#ff0000" is_bold="True" name="Aktuell" prog_lang="custom-colors" readonly="False" tags="" ts_creation="1556179378.83" ts_lastsave="1562927808.61" unique_id="3">
+	<node custom_icon_id="0" foreground="#ff0000" is_bold="True" name="Aktuell" prog_lang="custom-colors" readonly="False" tags="" ts_creation="1556179378.83" ts_lastsave="1563446967.1" unique_id="3">
 		<rich_text>Helfen lassen, wenn etwas nicht funktioniert
 Fragen bei: Problem über 20 Minuten
 ____________________________
@@ -64,13 +64,38 @@ Irgendwann noch mögliches Projekt(?): </rich_text>
 		<rich_text link="webs https://www.spice-space.org/">https://www.spice-space.org/</rich_text>
 		<rich_text> in KVM zum Laufen bekommen
 
+-&gt;Quartalsweiser Stundennachweis: Stunden müssen über Semester wieder stimmen. In Zettel auf halbe Stunden aufschreiben.
+
 
 </rich_text>
 		<rich_text scale="h1" underline="single" weight="heavy">ToDo</rich_text>
 		<rich_text scale="h1" weight="heavy">'</rich_text>
 		<rich_text>
+mit gcc probieren
+Beispiel SWIG
+Mein Pylon Code SWIG
+Pylon API SWIG
 
 
+
+
+swingwrapper -&gt; swingwrapper umbennen
+
+
+
+
+
+
+cd C:\Users\MobMonRob\Documents\NetBeansProjects\JVideoStream\gcc_wrapper
+swig -c++ -java  PylonOpenCvSwingWrapper.i
+g++ -c PylonOpenCvSwingWrapper_wrap.cxx -c PylonOpenCvSwingWrapper.cxx -I&quot;C:\Program Files\Java\jdk-12\include&quot; -I&quot;C:\Program Files\Java\jdk-12\include\win32&quot;
+g++ -shared PylonOpenCvSwingWrapper_wrap.o PylonOpenCvSwingWrapper.o -o PylonOpenCvSwingWrapper.dll
+
+
+
+
+
+Vm options:  -verbose:jni
 
 
 
