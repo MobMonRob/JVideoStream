@@ -1,0 +1,11 @@
+
+Exception in thread "main" java.lang.UnsatisfiedLinkError: PylonOpenCvSwingWrapperJNI.new_Shape(I)J
+	at PylonOpenCvSwingWrapperJNI.new_Shape(Native Method)
+	at Shape.<init>(Shape.java:39)
+	at JVideoStream.main(JVideoStream.java:37)
+C:\Users\MobMonRob\AppData\Local\NetBeans\Cache\11.0\executor-snippets\run.xml:111: The following error occurred while executing this line:
+C:\Users\MobMonRob\AppData\Local\NetBeans\Cache\11.0\executor-snippets\run.xml:68: Java returned: 1
+
+- lib wird definiv gefunden
+- gleiches Problem mit gcc wie vei visualstudio, daher vermutlich ein swig problem und kein linker-Problem
+
